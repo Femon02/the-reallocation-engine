@@ -1,0 +1,130 @@
+{
+  "attested": true,
+  "attested_date": "2026-10-29",
+  "attestation_note": "Three errors corrected: (1) removed the Northeastern Tech Financial Services Innovation Lab Graduate Research Assistant entry (Sep 2025-Jun 2026), which is not part of my attested record; (2) bachelor's degree type is not stated on the source resume, so the inferred 'B.S.' was removed and degree_type set to null; (3) projects had no dates, team size, or links on the source, so inferred dates and solo ownership were removed and those fields set to null.",
+  "source": "Yuhao_Fu_Resume.pdf",
+  "privacy_note": "Phone and email omitted because this repo may be public.",
+  "person": {
+    "name": "Yuhao Fu",
+    "location": "Boston, MA"
+  },
+  "education": [
+    {
+      "id": "edu-neu-ms",
+      "institution": "Northeastern University",
+      "location": "Boston, MA",
+      "degree_type": "M.S.",
+      "field": "Software Engineering Systems",
+      "start_date": null,
+      "end_date": "2027-12",
+      "status": "in_progress",
+      "relevant_coursework": ["Concepts of Object-Oriented Design", "Program Structure and Algorithms"]
+    },
+    {
+      "id": "edu-buct",
+      "institution": "Beijing University of Chemical Technology",
+      "location": "Beijing, China",
+      "degree_type": null,
+      "degree_type_note": "Not stated on source resume",
+      "field": "Artificial Intelligence",
+      "start_date": "2021",
+      "end_date": "2025",
+      "status": "completed",
+      "relevant_coursework": ["Machine Learning", "Deep Learning", "Deep Reinforcement Learning"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-tencent",
+      "organization": "Tencent",
+      "location": "Shenzhen, China",
+      "title": "Software Development Engineer Intern",
+      "employment_type": "internship",
+      "start_date": "2026-06",
+      "end_date": "2026-08",
+      "highlights": [
+        {
+          "description": "Built a LangGraph multi-agent content pipeline (research, outlining, parallel drafting, tone adaptation, automated quality checks)",
+          "metric": "Article production time from 4-5+ hours to under 20 minutes; 10 drafts per week with one human reviewer"
+        },
+        {
+          "description": "Developed a customer-support chatbot with routing, retrieval, response, and conversation agents using SQLite/Chroma RAG; query rewriting, FAQ matching, confidence scoring, streaming status updates, ticket-based human handoff",
+          "metric": null
+        },
+        {
+          "description": "Automated ingestion of PDF and Excel sources into a knowledge base using LLM classification plus deterministic validation to extract, normalize, and deduplicate records",
+          "metric": null
+        }
+      ],
+      "technologies": ["LangGraph", "Python", "SQLite", "Chroma", "RAG"],
+      "verification": "Internship offer letter / completion certificate (private, available on request)"
+    },
+    {
+      "id": "exp-shuangmu",
+      "organization": "Beijing Shuangmu Information Technology",
+      "location": "Beijing, China",
+      "title": "Software Engineer Intern",
+      "employment_type": "internship",
+      "start_date": "2025-05",
+      "end_date": "2025-08",
+      "highlights": [
+        {
+          "description": "Built a RAG chatbot for policy search and Q&A across enterprise documents",
+          "metric": "3K+ documents; 100+ concurrent queries"
+        },
+        {
+          "description": "Kafka-backed asynchronous jobs for traffic bursts; delayed-deletion synchronization for Redis cache consistency across distributed services",
+          "metric": null
+        },
+        {
+          "description": "JWT authentication and CI/CD pipelines with GitHub Actions, Docker, Kubernetes",
+          "metric": "Deployment time from days to hours"
+        }
+      ],
+      "technologies": ["Kafka", "Redis", "JWT", "GitHub Actions", "Docker", "Kubernetes", "RAG"],
+      "verification": "Internship offer letter / completion certificate (private, available on request)"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-gaming-platform",
+      "name": "High-Performance Gaming Platform",
+      "start_date": null,
+      "end_date": null,
+      "team_size": null,
+      "role": null,
+      "link": null,
+      "technologies": ["Java", "Spring Boot", "MyBatis", "React", "Redis", "AWS", "Kafka", "Cognito", "Jenkins", "Aurora", "ElastiCache"],
+      "highlights": [
+        {"description": "Full-stack platform with Cognito auth and Jenkins CI", "metric": "80%+ unit-test coverage"},
+        {"description": "Load testing; Aurora partitioning, targeted indexing, Redis/ElastiCache TTL caching", "metric": "~500 concurrent users, 300 TPS, p99 < 1s; avg query latency 200 ms -> 50 ms"},
+        {"description": "Tuned Kafka partitions and async consumers", "metric": "~100 -> 400 messages/sec"}
+      ],
+      "verification": "No public artifact yet (see gaps.md)"
+    },
+    {
+      "id": "proj-ai-notes",
+      "name": "AI Note-Taking Platform",
+      "start_date": null,
+      "end_date": null,
+      "team_size": null,
+      "role": null,
+      "link": null,
+      "technologies": ["React", "Django", "PostgreSQL", "MongoDB", "Redis", "Celery", "Elasticsearch", "AWS"],
+      "highlights": [
+        {"description": "Hybrid storage: PostgreSQL for users, MongoDB for notes, Elasticsearch for full-text and semantic retrieval", "metric": null},
+        {"description": "Redis + Celery pipeline moving LLM summarization, flashcard generation, and indexing to background workers", "metric": null}
+      ],
+      "verification": "No public artifact yet (see gaps.md)"
+    }
+  ],
+  "skills": {
+    "source": "Resume 'Technical Skills' section, as stated (coursework not converted into skills)",
+    "languages": ["Java", "Python", "SQL", "JavaScript/TypeScript", "C++"],
+    "backend_and_data": ["Spring Boot", "Django", "MyBatis", "REST APIs", "PostgreSQL", "MongoDB", "Redis", "Kafka", "Elasticsearch"],
+    "cloud_and_devops": ["AWS", "Docker", "Kubernetes", "Linux", "GitHub Actions", "CI/CD", "Maven", "Gradle", "JUnit"],
+    "ai_ml": ["PyTorch", "LangGraph", "RAG", "Embeddings", "Vector Search", "LLM Evaluation"]
+  },
+  "certifications": [],
+  "publications": []
+}

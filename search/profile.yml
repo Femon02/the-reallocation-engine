@@ -1,0 +1,36 @@
+# Search profile — Yuhao Fu
+# Answers are facts as of 2026-10-29. Anything not confirmed is marked uncertain.
+
+target_role: >
+  Entry-level / new-grad Software Development Engineer (backend or
+  AI-application engineering) at a US company with an H-1B sponsorship history.
+soc_code: "15-1252.00"   # O*NET: Software Developers
+
+visa:
+  type: F-1 (planning post-completion OPT)
+  program_end_date: "2027-12"          # expected M.S. completion
+  opt_status: not_yet_applied
+  opt_authorization_start: uncertain   # depends on EAD approval
+  opt_authorization_end: uncertain     # 12 months from EAD start
+  unemployment_days_used: 0            # OPT not started
+  stem_opt_eligible: uncertain         # not confirmed with DSO
+  stem_opt_note: "Confirm with Northeastern OGS/DSO before the engine treats this as a gate."
+  unemployment_buffer_target_days: 80  # below the 90-day ceiling
+
+geography:
+  preferred: ["Boston, MA metro"]
+  open_to_relocation: true
+  relocation_scope: United States only
+  remote: acceptable
+  constraints: "Must be a US location (OPT work authorization)."
+
+industry:
+  sectors: ["Enterprise software", "Cloud / infrastructure", "AI applications", "Fintech"]
+  company_size: ["Series B+", "Public"]
+  company_size_note: "Larger companies are more likely to have sponsorship history."
+  hard_exclusions: []
+
+sponsorship:
+  required: true
+  gate: true
+  rule: "Company with no H-1B sponsorship history, or posting stating no sponsorship -> Skip regardless of fit."
