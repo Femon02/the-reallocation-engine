@@ -80,3 +80,27 @@ decisions stand; only their printed justifications under-explained them.
 
 ### 2026-10-21 — ms-is-swe-opt-shortlist · Mode Build sample run
 Recipe `ms-is-swe-opt-shortlist` v0.2.0 (RUNNABLE-SAMPLE; 4 TODOs open, all proposed additions outside the run). Inputs: `course/2026fa/submissions/Vrajesh-works/mode-build/postings-2026-10-21.json` (12 entries), `--as-of 2026-10-21 --opt-start 2027-01-15` (placeholder dates), 80 Days CSV sha256 `eccdee2a…6270` (30,369 rows, newest funding 2025-09-26, 390 days before the as-of date). Outputs: `mode-build/runs/shortlist-log.json`, `shortlist-report.md`, scorer `role-scores.json/.md`. Result: `3/12 scored · Apply 1 · Consider 0 · Skip 2 (skip 67%)`; 2 excluded by a human (citizenship, clearance); 1 opt-bridge-open; 2 not-in-csv; 4 no-posting network targets. `npm run ats:liveness`: 6 active, 1 expired (Intuit, HTTP 404; company not in CSV so no decision changed). **Defect:** it printed Cohere Health active, but the student opened the page ("no longer open"); Greenhouse redirects removed jobs to the board with HTTP 200. Cohere typed `dead` by a person and the run redone (first run: Apply 1 · Consider 1 · Skip 1). Engine script not changed; defect not yet reported upstream. Break attempts: dead posting → Skip/network; `--as-of` after window → all Skip; impossible date and tracked out-dir → exit 2. 17 tests pass; `npm run verify` passes. **Gate G4:** Vrajesh Mathurbhai Nasit reopened the Verkada and Motion Recruitment postings on 2026-10-21 and confirmed both live (stated in session; the program's JSON `human_gate` field is unchanged). Open: unscored dead postings are not flagged; data is 390 days old; "entry-level" unverifiable; funding not a scorer input.
+
+## 2026-10-29 — Setup Exercise: search/ personal layer
+
+**What was built**
+- `search/resume.json` — structured, attested record (education, 2 internships, 2 projects, skills)
+- `search/profile.yml` — target role, F-1 OPT constraints, geography, sponsorship gate
+- `search/gaps.md` — 4 gaps with posting/O*NET evidence, 1 killed row
+- `search/private-notes.md` added to `.gitignore`
+
+**Three attestation errors caught in resume.json**
+1. Removed the Northeastern Tech Financial Services Innovation Lab Graduate Research Assistant entry — not part of my attested record.
+2. Bachelor's degree type was inferred as "B.S."; the source doesn't state it, so it is now null.
+3. Projects were given inferred dates and implied solo ownership; the source states neither, so those fields are null.
+
+**Top gap:** My project claims (TPS, latency, throughput numbers) have no public artifact anyone can check. Plan: public repos with reproducible load-test scripts.
+
+**Killed row:** "Bachelor's degree in Computer Science." The agent treated an Artificial Intelligence major as outside CS, but the cited postings accept "or related field," and my M.S. is in Software Engineering Systems.
+
+**Corrected profile.yml field:** Target geography/role. The first draft considered non-US options; corrected to a US-only search on F-1 OPT.
+
+### Verification check
+- **resume.json:** Both internships are traceable to offer letters/completion certificates. The two projects are not yet traceable — no repo, no dates, no team size — so their metrics are flagged in gaps.md rather than treated as verified.
+- **profile.yml:** Visa section reflects actual status: OPT not yet applied, so start/end dates are marked uncertain. STEM OPT eligibility is marked uncertain because I have not confirmed it with my DSO.
+- **gaps.md:** Every evidence cell links to a specific posting or the O*NET 15-1252.00 entry. Limitation: the postings are from 2025–2026 cycles, not my 2027–2028 cycle, so the demand signal should be re-checked against live postings.
